@@ -1,0 +1,256 @@
+{
+  "clientlist": [
+    {
+      "id": 1,
+      "name": "Bob",
+      "hours": "45",
+      "status": "In-Progress",
+      "phase": "Development",
+      "details": "Details",
+      "nextCall": "Fri, May 6th at 2PM EST",
+      "memo": "Waiting to show where I am current to proceed forward",
+      "settings": "Edit",
+      "tasksCompleted": "Design",
+      "active": true,
+      "projectName": "ABC"
+    },
+    {
+      "id": 2,
+      "name": "New feature introduced",
+      "hours": "45",
+      "status": "In-Progress",
+      "phase": "Development",
+      "details": "Details",
+      "nextCall": "Fri, May 6th at 2PM EST",
+      "memo": "Waiting to show where I am current to proceed forward",
+      "settings": "Edit",
+      "tasksCompleted": "Design",
+      "active": true,
+      "projectName": "",
+      "timestamp": "Sept 24, 2022 13:20:18",
+      "description": "We are excite to share this new feature, rolled out Monday",
+      "link": "#",
+      "link_text": "Learn More",
+      "checked": true
+    },
+    {
+      "id": 3,
+      "name": "Bob",
+      "hours": "45",
+      "status": "In-Progress",
+      "phase": "Development",
+      "details": "Details",
+      "nextCall": "Fri, May 6th at 2PM EST",
+      "memo": "Waiting to show where I am current to proceed forward",
+      "settings": "Edit",
+      "tasksCompleted": "Design",
+      "active": true,
+      "projectName": "ABC"
+    },
+    {
+      "name": "bob doe",
+      "hours": "1",
+      "status": "waiting",
+      "phase": "Ready",
+      "tasksCompleted": "Drive folder put together",
+      "details": "List details",
+      "nextCall": "tommorow",
+      "memo": "Enter memo",
+      "id": 4,
+      "active": false,
+      "projectName": ""
+    },
+    {
+      "name": "Full name",
+      "hours": 0,
+      "status": "waiting",
+      "phase": "one",
+      "tasksCompleted": "Tasks completed",
+      "details": "List details",
+      "nextCall": "Next call",
+      "memo": "Enter memo",
+      "id": 5,
+      "active": false,
+      "projectName": ""
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "name": "New feature introduced",
+      "timestamp": "Sept 24, 2022 13:20:18",
+      "description": "We are excite to share this new feature, rolled out Monday",
+      "link": "#",
+      "link_text": "Learn More",
+      "checked": true
+    },
+    {
+      "id": 2,
+      "name": "New feature introduced",
+      "timestamp": "Sept 24, 2022 13:20:18",
+      "description": "We are excite to share this new feature, rolled out Monday",
+      "link": "#",
+      "link_text": "Learn More",
+      "checked": true
+    },
+    {
+      "id": 3,
+      "name": "Register for partner webinar: Prep for the holidays with new social commerce tools",
+      "timestamp": "Sept 24, 2022 13:20:18",
+      "description": "Tune in August 17th at 2pm ET to learn about new tools for social commerce. Join our team for an overview of YouTube Shopping, Twitter Shopping, Starter Plan, Linkpop, and Collabs, and learn how to make the most of these channels as you prepare your merchants for the upcoming holiday season. There will also be a live Q+A with our team, and the opportunity to submit questions in advance.",
+      "link": "#",
+      "link_text": "Learn More",
+      "checked": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Pat",
+      "middlename": "",
+      "lastname": "Gib",
+      "email": "pat@pat.com",
+      "role": "user",
+      "notifications": [],
+      "phone number": "111-111-1111",
+      "projects": [],
+      "companies": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "firstname": "Jack",
+      "middlename": "",
+      "lastname": "Jay",
+      "email": "jack@jack.com",
+      "role": "user",
+      "notifications": [],
+      "phone number": "222-222-2222",
+      "projects": [],
+      "companies": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "firstname": "Nicole",
+      "middlename": "",
+      "lastname": "Gee",
+      "email": "nicole@nicole.com",
+      "role": "user",
+      "notifications": [],
+      "phone number": "333-333-3333",
+      "projects": [],
+      "companies": []
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "LMP Tech",
+      "address": {
+        "street": "255 Douglass St",
+        "city": "Brooklyn",
+        "zip": "12345"
+      },
+      "owner-id": 2,
+      "members": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Amco",
+      "address": {
+        "street": "456 London St",
+        "city": "Brooklyn",
+        "zip": "34567"
+      },
+      "owner-id": 1,
+      "members": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Wheels",
+      "address": {
+        "street": "789 Brooklyn St",
+        "city": "Brooklyn",
+        "zip": "78966"
+      },
+      "owner": 2,
+      "members": []
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "owner-id": 2,
+      "members": [
+        2,
+        3
+      ],
+      "companies": [
+        2
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Getting started",
+          "notes": "Gather data",
+          "due-date": "01/02/2024",
+          "assigned": "2",
+          "completed": false
+        },
+        {
+          "id": 2,
+          "title": "Reasearch and planning",
+          "notes": "Create a plan",
+          "due-date": "01/17/2024",
+          "assigned": "",
+          "completed": false
+        }
+      ],
+      "phase": "Planning and Research",
+      "status": "Poccessing",
+      "last-updated": "07-24-2022"
+    },
+    {
+      "id": 2,
+      "owner": 2,
+      "members": [
+        1,
+        2
+      ],
+      "companies": [
+        1
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Getting started",
+          "notes": "Gather data",
+          "due-date": "01/02/2024",
+          "assigned": "1",
+          "completed": true
+        },
+        {
+          "id": 2,
+          "title": "Create Mockup",
+          "notes": "create homepage design",
+          "due-date": "01/02/2024",
+          "assigned": "2",
+          "completed": false
+        }
+      ],
+      "phase": "Design",
+      "status": "In progress",
+      "last-updated": "07-24-2022"
+    }
+  ]
+}

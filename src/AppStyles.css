@@ -1,0 +1,709 @@
+/* ====================================================================== *\
+  # App Master Stylesheet
+\* ====================================================================== */
+  /*** Layout ***/
+    /** Page **/
+    /* Header */
+      .header {
+        background: #575757;
+        padding: 0 8px;
+        height: 50px;
+      }
+      .menu-area {
+        display: none;
+      }
+      .menu-area:hover .links-bar {
+        display: block;
+      }
+      .menu-area button {
+        background: #575757;
+        padding-top: 3px;
+        margin: auto 0;
+        border: none;
+        font-size: 30px;
+        color: #FFFFFF ;
+      }
+      .links-bar {
+        display: none;
+        position: absolute;
+        width: 200px;
+        background-color: #F4F6F8;
+        box-shadow: 1px 1px 1px 1px #dfe3e8;
+        margin-top: 6px;
+        padding: 10px 0;
+      }
+    
+      .links-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .links-area a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+    
+      .logo-area p {
+        color: #FFFFFF;
+        font-size: 24px;
+        text-shadow: 2px 2px 2px #222222;
+        margin: 0;
+        padding-left: 5px;
+      }
+      .unread-indicator {
+        position: absolute;
+        top: 5px;
+        right: 52px;
+        font-size: 12px;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding: 3px;
+        border-radius: 500px;
+        background-color: #de3618;
+        color: #FFFFFF;
+        text-align: center;
+    }
+      .logo-area svg, .notification-area svg {
+        width: 50px;
+        height: 50px;
+    } .end-area {
+        display: flex;
+    }
+      .window {
+        display: grid;
+        grid-template-columns: 200px 1fr; 
+        background: #F4F6F8;
+        min-height: 900px;
+      }
+      
+  /*** Layout ***/
+  /*** Components ***/
+    /** Menu **/
+      
+        nav.navbar {
+          text-align: left;
+          padding: 30px;
+          background: #FFFFFF;
+          height: 60px;
+        }
+        nav.navbar h1 {
+          margin: 0px;
+          padding-top: 15px;
+        }
+      /* Sidebar */
+        nav.sidebar {
+          display: block;
+          padding: 10px 30px 10px 0;
+          border-right: 1px solid #dfe3e8;
+        }
+        nav.sidebar a, .links-bar a {
+          color: #222222;
+          background: #F4F6F8;
+          text-decoration: inherit;
+          margin: 0 auto;
+        }
+        .sidebar .links {
+          display: grid;
+        }
+        .sidebar .links svg, .links-bar svg {
+          width: 150px;
+          height: 40px;
+          
+        }
+    /** Client List **/
+      .list {
+        padding: 0 30px;
+        margin: 20px auto;
+      }
+      .add-area {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+      .client-list, .client-project {
+        min-width: 580px;
+        padding: 0;
+        margin: 20px auto;
+        border: none;
+        border-radius: 5px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 4px 1px #dfe3e8;
+      } 
+      .client-list li {
+        list-style-type: none;
+      }
+      .choice-area {
+        display: flex;
+        border-bottom: 1px solid #F4F6F8;
+      } 
+      .client-list .choice-area li {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px 15px;
+      }
+      
+      
+      .client-list .choice-area li[aria-selected="true"] {
+        border-bottom: 3px solid #5c6ac4;
+      } 
+      .client-list p {
+        padding-top: 15px;
+        margin: 0;
+      }
+      .client-list .list-content li:nth-child(odd) {
+        background: #F4F6F8;
+      }
+      .client-list .list-content li:hover {
+        background-color: #e3e4e4;
+    }
+      .label-header {
+        border-top: 1px solid #F4F6F8;
+        margin-top: 10px;
+      }
+      .search-area select {
+        border-left: 1px solid #C4CDD5;
+        background-color: #FFFFFF;
+        width: 120px;
+        margin: 0;
+        font-size: 15px;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .list-sort {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid #F4F6F8;
+        padding: 0 20px;
+      }
+      .list-sort select {
+        border: 1px solid #C4CDD5;
+        background-color: #FFFFFF;
+        width: 145px;
+        height: 36px;
+        box-shadow: none;
+        font-size: 15px;
+        
+      }
+      .label-header, .client-list .list-content li {
+       display: grid;
+       grid-template-columns: 4fr 3fr 3fr 4fr .1fr;
+       grid-gap: 10px;
+       border-bottom: 1px solid #F4F6F8;
+       list-style-type: none;
+      }
+     
+     .client-list ul {
+      margin: 0;
+      padding: 0;
+    }
+    .client-list span {
+      margin: 15px 20px;
+    }
+    .client-list a {
+      margin: 15px 20px;
+      text-decoration: none;
+    }
+    a.name-column {
+      color: blue;
+    }
+    .client {
+      text-align: left;
+      margin: 0 auto;
+      }
+    .status-area, .tasks-area {
+      border-bottom: 1px solid #F4F6F8;
+    }
+    .status-area, .tasks-area, .dates-area {
+      padding:  1px 20px 10px;
+    }
+    tspan {
+      font-size: 10px;
+    }
+    
+  /*** Pages ***/
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .dashboard div {
+    border: none;
+    border-radius: 5px;
+    background: #FFFFFF;
+    padding-left: 20px;
+    box-shadow: 0px 1px 3px 0px #DFE3E8;
+  }
+  .dashboard p {
+    font-size: 30px;
+    margin-bottom: 0.6em;
+  }
+  
+  .export {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 0 20px; 
+  }
+  .export h2, .add-area h2 {
+    padding: 0;
+    margin: 0;
+  }
+  .input-stylized {
+    display: flex;
+    border: 1px solid #C4CDD5;
+    border-radius: 3px;
+    margin: 0 auto;
+  }
+  .search-area {
+    padding: 15px 20px 5px;
+  }  
+  span.input-before {
+    margin: 8px;
+  }
+  .input-search {
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .project-list select {
+    display: none;
+  }
+  .project-list .list-content a:nth-child(5) {
+    display: none;
+  }
+  .static-area {
+    text-align: center; 
+    margin: 20px auto;
+    padding-bottom: 20px;
+  }
+  
+  .button-area svg {
+    fill: #919eab;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+  .previous-button, .next-button {
+    padding: 5px;
+    max-width: 40px;
+    border-radius: 3px;
+    border: 1px solid #c4cdd5;
+    background-color: #F4F6F8;
+  }
+  .App {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*** Notification ***/
+  .notifications, .client-support, .projects-team {
+    padding: 0 30px;
+  }
+  .note-text {
+    display: flex;
+  }
+  .accordion {
+    padding: 0;
+    list-style: none;
+  }
+  .accordion-item {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    
+  }
+  .accordion .button {
+    font-size: 16px;
+    text-align: left;
+    font-weight: 700;
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFFFFF;
+  }
+  
+  .accordion .control {
+    font-size: 20px;
+  }
+  .accordion .answer_wrapper {
+    height: 0;
+    overflow: hidden;
+  }
+  .accordion .answer_wrapper.open {
+    height: auto;
+  }
+  .accordion .answer {
+    padding: 10px 20px;
+  }
+  .accordion .answer p {
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+    background-color: #F4F6F8;
+  }
+  /* .notifications li::before {
+    content: "\25CF";
+    padding-right: 10px;
+    color: blue;
+    font-size: 8px;
+  } */
+  
+  .notifications .accordion  p {
+    display: block;
+}
+  .notifications span {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .notifications h2 {
+    margin: 10px auto 10px 0;
+    max-width: 1000px;
+  }
+  .notifications h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+  .notifications a {
+    color: blue;
+    text-decoration: none;
+    margin-left: auto;
+  }
+  .arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin: 0.5rem;
+    border-bottom: 5px solid black;
+  }
+  .note-dot {
+    height: 10px;
+    margin: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid #c4cdd5;
+  }
+
+  .not-checked {
+    background: #006fbb;
+    
+  }
+
+
+  /*** Setting ***/
+  .client-settings {
+    margin: 0 auto;
+  }
+  form.setting-area {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+  .dark-light {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dark-light input {
+    display: inline;
+    min-width: 40px;
+    box-shadow: none;
+  }
+  .dark-light input[type="submit"] {
+    height: fit-content;
+  }
+    
+  /* Global */
+  html {
+    box-sizing: border-box;
+  }
+  
+  /* Keeps input fields with padding and a full width, from pushing outside a grid container 
+  *,
+  *:before,
+  *:after {
+    box-sizing: content-box;
+  }*/
+  
+  /* Input consistentcy thorugh multple browsers
+     Set "max-width" to manager future adjsutments
+  */
+  input,textarea {
+    min-width: 250px;
+    display:block;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px #DFE3E8;
+  }
+  
+  label{
+    margin-bottom:10px;
+    text-align:left;
+  }
+  input[type=text] {
+    background-color: #F4F6F8;
+    border: none;
+    line-height: 1.8em;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    width: 100%;
+  }
+  input[type=text]:focus {
+    border: none;
+  }
+  ::-webkit-input-placeholder {
+    text-align: start;
+  }
+  select, textarea {
+    background-color: #F4F6F8;
+    border-radius: 3px;
+    border: none;
+    line-height: 1.8em;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0px 1px 3px 0px #DFE3E8;
+  }
+  
+  
+  input[type=button] { 
+    background: #f9fafb;
+    border: 0.1rem solid #c4cdd5;
+    min-width: 60px;
+    padding: 6px;
+    box-shadow: 1px 1px 4px 1px #dfe3e8;
+  }
+  input[type=submit] { 
+    background: purple;
+    border: 0.1rem solid purple;
+    min-width: 60px;
+    padding: 6px;
+    box-shadow: 0 1px 0 0 purple;
+    color: #FFFFFF;
+  }
+  input[type="submit"]:hover {
+    opacity: .8;
+  }  
+  p {
+    margin: 0 0 5px 0;
+  }
+  
+  /* Client Form */
+
+    .client-form {
+      padding: 20px 30px;
+      margin: 0 auto;
+    }
+    .client-form svg {
+      max-height: 20px;
+      padding-left: 15px;
+    }   
+    .client-form h2, .client-form h3 {
+      padding: 0 20px;
+    }
+    form {
+      display: block;
+      
+    }
+    .form-area {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-gap: 20px;
+      border-bottom: 1px solid #DFE3E8;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .project, .execution, .description, .memo {
+      border: none;
+      border-radius: 3px;
+      background-color: #FFFFFF;
+      padding: 20px 20px 0 20px;
+      box-shadow: 0px 1px 3px 0px #DFE3E8;
+      max-width: 600px;
+    }
+    
+    .submit-area {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px;
+   }
+   
+    .grid {
+      display: grid;
+      grid-gap:10px;
+    }
+    .dev-block {
+      display: none;
+    }
+   
+    .grid-col-20-60 {
+      grid-template-columns: 1fr 4fr;
+    }
+    
+    /* Mobile */
+    @media screen and (max-width: 850px) {
+      .menu-area {
+        display: block;
+      }
+      .window {
+        grid-template-columns: 1fr;
+      }
+      .window .sidebar {
+        display: none;
+      }
+      .notifications {
+        margin: 0;
+      }
+     
+    } 
+    @media screen and (max-width: 650px) {
+      .list-content span {
+        margin: 10px;
+      }
+      
+      
+      .form-area {
+        grid-template-columns: 1fr;
+      }
+      .list, .App {
+        padding: 0;
+      }
+      .switch-area, .add-area {
+        padding: 0 20px;
+      } 
+      .client-list, .client-project {
+        min-width: 300px;
+      }
+      .client-list .list-content li { 
+        grid-gap: 5px;
+      }
+      .App h1 {
+        padding-left: 20px;
+      }
+      
+      .dashboard {
+        padding: 0 10px;
+      
+      }
+    }
+    @media screen and (max-width: 530px) {
+     
+      .client-form {
+        padding: 10px 0;
+        margin: 0;
+      }
+      .client-list ul {
+        border: none;
+        padding: 0;
+      }
+      ul.choice-area {
+        border-bottom: 1px solid #F4F6F8;
+    }
+      .client-list .list-content li { 
+        grid-gap: 1px;
+        padding: 0 10px;
+      }
+      .client-list .list-content span {
+        margin: 10px;
+      }
+      .client-list a {
+        margin: 5px;
+      }
+      .dashboard div {
+        padding-left: 0.8em;
+      }
+      .search-area {
+        padding: 15px 10px 5px;
+      }
+      .list-sort {
+        padding: 0 10px;
+      }
+      .client h1 {
+        padding: 0 20px;
+      }
+    }  
+      @media screen and (max-width: 430px) {
+      .logo-area p {
+        font-size: 18px;
+      }
+      .dashboard {
+        grid-gap: 10px;
+      }
+      .dashboard h3 {
+        font-size: small;   
+      }
+      .list {
+        min-width: 300px;
+      }
+      .client-list .list-content li {
+        grid-template-columns: 1fr;
+      }
+      
+      input, textarea {
+        min-width: 100px;
+      }
+      .switch-area, .add-area {
+        padding: 0 10px;
+      }
+      .label-header span{
+        margin: 10px 0 10px 20px;
+      }
+    } 
+
+
+
+   
+      .FirstTab p,
+      .SecondTab p {
+        font-size: 2rem;
+        text-align: center;
+      }
